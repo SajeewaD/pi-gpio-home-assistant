@@ -1,0 +1,1 @@
+# pi-gpio-home-assistant
