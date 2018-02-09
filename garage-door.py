@@ -3,20 +3,23 @@ import time
 import sys
 import signal 
 
-# Set board mode so we can address GPIO pins by number.
-GPIO.setmode(GPIO.BOARD) 
+#Configuration:
 
 #GPIO Pin used to read door sensor
 DOOR_SENSOR_PIN = 18
+
+
 
 # Clean up when the user exits with keyboard interrupt
 def cleanup(signal, frame): 
     GPIO.cleanup() 
     sys.exit(0)
 
-
 # Start of programme    
 if __name__ == "__main__":
+
+    # Set board mode so we can address GPIO pins by number.
+    GPIO.setmode(GPIO.BOARD) 
 
     # Initially we don't know if the door sensor is open or closed...
     isOpen = None
