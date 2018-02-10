@@ -12,3 +12,6 @@
 ## Running the service
 simple type 
 sudo /etc/init.d/doorsensor start
+
+To enable automatic starting of the service at startup run 
+sudo systemctl enable doorsensor.service
